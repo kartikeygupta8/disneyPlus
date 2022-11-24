@@ -19,7 +19,6 @@ const Viewers = () => {
         <Wrap>
             <img src="/images/viewers-starwars.png" alt=""/>
         </Wrap>
-        
     </Container>
   )
 }
