@@ -1,13 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 import ImgSilder from "./imgSilder";
+import Movies from "./movies";
 import Viewers from "./viewers";
 
 
 const Home = () => {
   return <Container>
     <ImgSilder />
-    <Viewers></Viewers>
+    <Viewers />
+    <Movies />
   </Container>;
   
 };
