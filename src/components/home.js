@@ -1,17 +1,37 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
+import db from "../firebase";
+import { collection, getDocs } from 'firebase/firestore/lite';
 import ImgSilder from "./imgSilder";
 import Movies from "./movies";
 import Viewers from "./viewers";
 
 
 const Home = () => {
-  return <Container>
+  useEffect(()=>{
+    console.log(getSnap(db))
+  },[])
+    
+  async function getSnap(db) {
+    const movies = collection(db,'movies');
+    console.log('movie',movies)
+    const moviesSnap = await getDocs(movies);
+    console.log('moviesSnap',moviesSnap)
+    const movieList = moviesSnap.docs.map(doc => {
+      return {id: doc.id, ...doc.data};
+    });
+    console.log(movieList);
+    
+
+}
+
+
+  return (<Container>
     <ImgSilder />
     <Viewers />
     <Movies />
-  </Container>;
-  
+  </Container>
+  )
 };
 
 export default Home;

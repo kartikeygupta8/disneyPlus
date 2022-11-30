@@ -30,7 +30,8 @@ const Details = () => {
         2018 * 7m * Family, Fantasy, Kids, Animation
       </SubTitle>
       <Description>
-      I’ve learned so much and now have a new job that is to you all! You make the tutorials insanely fun to follow, so much so that I watch even when I can’t follow along, on drives (listening), on work breaks, etc.
+      I’ve learned so much and now have a new job that is to you all! You make the tutorials insanely fun to follow,
+       so much so that I watch even when I can’t follow along, on drives (listening), on work breaks, etc.
       </Description>
     </Container>
   );
@@ -42,6 +43,7 @@ const Container = styled.div`
   min-height: calc(100vh - 70px);
   padding: 0 calc(3.5vw + 5px);
   position: relative;
+ 
 `;
 const Background = styled.div`
   position: fixed;
@@ -62,7 +64,7 @@ const ImageTitle = styled.div`
   width: 35vw;
   min-height: 170px;
   min-width: 200px;
-
+  margin-top: 60px;
   img {
     width: 100%;
     height: 100%;
@@ -126,4 +128,5 @@ const Description = styled.div`
   font-size: 20px;
   margin-top: 16px;
   color: rgb(249,249,249);
+  max-width: 700px;
 `;
